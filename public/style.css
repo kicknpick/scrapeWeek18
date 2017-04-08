@@ -14,9 +14,10 @@
      overflow: auto;
      width: 70%;
      height: 700px;
+     color: white;
  }
 
- #jumbo{
+ #jumboHead{
       color: white;
  }
 
