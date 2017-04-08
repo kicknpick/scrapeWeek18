@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://heroku_5l4zf6t0:c4s25tbp3p4j3ljnvbcul8u3go@ds157040.mlab.com:57040/heroku_5l4zf6t0");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -50,11 +50,11 @@ db.once("open", function() {
 // A GET request to scrape the echojs website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
-  request("http://www.echojs.com/", function(error, response, html) {
+  request("http://www.espn.com/college-football/team/_/id/61/georgia-bulldogs", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
-    // Now, we grab every h2 within an article tag, and do the following:
-    $("article h2").each(function(i, element) {
+    // Now, we grab every h5 within an article tag, and do the following:
+    $("article h1").each(function(i, element) {
 
       // Save an empty result object
       var result = {};
@@ -66,7 +66,7 @@ app.get("/scrape", function(req, res) {
       // Using our Article model, create a new entry
       // This effectively passes the result object to the entry (and the title and link)
       var entry = new Article(result);
-
+      console.log(entry);
       // Now, save that entry to the db
       entry.save(function(err, doc) {
         // Log any errors
