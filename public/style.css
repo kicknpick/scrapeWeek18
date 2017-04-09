@@ -15,10 +15,15 @@
      width: 70%;
      height: 700px;
      color: white;
+     font-size: 20px;
  }
 
  #jumboHead{
       color: white;
+ }
+
+ #jumboHead h2{
+  margin-bottom: 30px;
  }
 
  #jumboContainer{
