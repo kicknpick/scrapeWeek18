@@ -34,7 +34,10 @@
      float: right;
      width: 30%;
      color: #333333;
-     background: white;
+ }
+
+ #titleinput, #bodyinput{
+  background: white;
  }
  
  textarea,
