@@ -3,9 +3,9 @@
  }
  
  #wrapper {
-     width: 960px;
-     margin-left: auto;
-     margin-right: auto;
+     width: 80%;
+     margin-left: 10%;
+     margin-right: 10%;
      padding-top: 5%;
  }
  
@@ -17,17 +17,17 @@
      color: #333333;
      font-size: 20px;
  }
-
- #jumboHead{
-      color: white;
+ 
+ #jumboHead {
+     color: white;
  }
-
- #jumboHead h2{
-  margin-bottom: 30px;
+ 
+ #jumboHead h2 {
+     margin-bottom: 30px;
  }
-
- #jumboContainer{
-    background: #35474c;
+ 
+ #jumboContainer {
+     background: #35474c;
  }
  
  #notes {
@@ -35,9 +35,10 @@
      width: 30%;
      color: #333333;
  }
-
- #titleinput, #bodyinput{
-  background: white;
+ 
+ #titleinput,
+ #bodyinput {
+     background: white;
  }
  
  textarea,
@@ -56,5 +57,3 @@
      height: 200px;
      font-size: 18px;
  }
- 
- 
